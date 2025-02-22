@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-iE VOTING TEAM</title>
+    <style>
+ /* CSS cho nút cuộn lên đầu trang - ĐẸP HƠN */
+
+ .scroll-to-top img {
+        width: 50px;
+        height: 50px;
+    }
+
+
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 55px;
+            height: 55px;
+          
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 26px;
+            cursor: pointer;
+            display: none; /* Ban đầu ẩn */
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Hiệu ứng hover */
+        .scroll-to-top:hover {
+
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Hiệu ứng khi bấm vào */
+        .scroll-to-top:active {
+            transform: scale(0.95);
+        }
+
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #9B4D96;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        section#home {
+            background-color: #e1f5fe;
+
+        }
+
+        section#announcements {
+            background-color: #ffecb3;
+
+        }
+
+        section#socials a {
+            display: block;
+            margin: 10px 0;
+            color: #4a90e2;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        section#socials a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icon-css/css/flag-icon.min.css">
+</head>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to V-iE Voting Team!</h1>
+        <p>Đây là nơi cập nhật thông tin mới nhất về các bảng vote của TEMPEST!</p>
+        <nav>
+            <a href="#home">Các bảng vote (Open)</a>
+            <a href="#announcements">Apps vote</a>
+            <a href="#socials">Liên kết</a>
+        </nav>
+    </header>
+
+<ul>
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* Tiêu đề chính nằm ở giữa */
+    h2 {
+      text-align: center;
+      color: #4CAF50;
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    /* Kiểu dáng cho các nút Accordion */
+    .accordion {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 15px;
+      cursor: pointer;
+      width: 100%;
+      text-align: center;  /* Đặt tiêu đề nằm giữa */
+      font-size: 18px;
+      outline: none;
+      font-weight: bold; /* In đậm */
+      border-radius: 5px;
+      margin-bottom: 10px;
+      transition: all 0.3s ease;
+    }
+
+    /* Đổi màu chữ và số thứ tự khi di chuột vào */
+    .accordion:hover {
+      background-color: #fff;
+      color: #F1A7C6; /* Đổi màu chữ khi hover */
+    }
+
+    /* Đánh số thứ tự cho mỗi section (màu đen và in đậm) */
+    .accordion::before {
+      content: attr(data-order) ". ";
+      color: #000; /* Màu đen */
+      font-weight: bold; /* In đậm */
+    }
+
+    /* Các phần nội dung */
+    .panel {
+      padding: 0 18px;
+      display: none;
+      background-color: #f1f1f1;
+      border-left: 3px solid #F1A7C6;
+      border-radius: 0 0 5px 5px;
+      margin-bottom: 10px;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Mở rộng hiệu ứng */
+    .panel p {
+      padding: 15px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    /* Cập nhật trạng thái mở rộng */
+    .accordion.active {
+      background-color: #4B5320;
+      color: #F1A7C6;
+    }
+
+    /* Thay đổi màu sắc số thứ tự và tiêu đề khi hover */
+    .accordion.active::before {
+      color: white; /* Màu trắng cho số thứ tự khi mở rộng */
+    }
+  </style>
+  <title>CÁC APP VOTE</title>
+</head>
+<body>
+
+    <section id="home">
+	        <h2>CÁC BẢNG VOTE (Open)</h2>
+      
+<!-- Các section accordion với số thứ tự -->
+
+<button class="accordion" data-order="1">Show Champion</button>
+<div class="panel">
+
+ <style>
+    .justify-text {
+      text-align: justify;
+    }
+  </style>
+<p class="justify-text"><strong>1.1. Thời hạn sử dụng Chamsim</strong></p>
+<p class="justify-text">- Tim <i class="fas fa-heart" style="color: blue;"></i> sẽ reset trước 22H00<!-- Cờ Việt Nam --> <span class="flag-icon flag-icon-vn"></span> vào ngày cuối cùng của mỗi tháng.</p>
+<p class="justify-text">- Tim <i class="fas fa-heart" style="color: red;"></i> có thời hạn sử dụng VĨNH VIỄN.
+	</p>
+</div>
+<button class="accordion" data-order="2">Music Bank</button>
+
+<div class="panel">
+  <p>Tim <i class="fas fa-heart" style="color: red;"></i> có thời hạn sử dụng 90 ngày.</p>
+</div>
+
+<button class="accordion" data-order="3">The Show</button>
+<div class="panel">
+  <p>This is the content for section 3. You can add more information here as needed.</p>
+</div>
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+
+    </section>
+    <section id="announcements">
+
+
+
+<h2>CÁC APP VOTE</h2>
+
+<!-- Các section accordion với số thứ tự -->
+<button class="accordion" data-order="1">Idol Champ</button>
+<div class="panel">
+
+ <style>
+    .justify-text {
+      text-align: justify;
+    }
+  </style>
+<p class="justify-text"><strong>1.1. Thời hạn sử dụng Chamsim</strong></p>
+<p class="justify-text">- Tim <i class="fas fa-heart" style="color: blue;"></i> sẽ reset trước 22H00<!-- Cờ Việt Nam --> <span class="flag-icon flag-icon-vn"></span> vào ngày cuối cùng của mỗi tháng.</p>
+<p class="justify-text">- Tim <i class="fas fa-heart" style="color: red;"></i> có thời hạn sử dụng VĨNH VIỄN.
+	</p>
+
+</body>
+	
+
+  <a href="https://www.facebook.com/share/p/15rds4Qjug/" target="_blank">Hướng dẫn tải và tích Chamsim trên Idol Champ</a>
+</div>
+
+<button class="accordion" data-order="2">All Chart</button>
+<div class="panel">
+  <p>Tim <i class="fas fa-heart" style="color: red;"></i> có thời hạn sử dụng 90 ngày.</p>
+</div>
+
+<button class="accordion" data-order="3">Star Planet</button>
+<div class="panel">
+  <p>This is the content for section 3. You can add more information here as needed.</p>
+</div>
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  for (var i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
+	</ul>
+
+    </section>
+    <section id="socials">
+        <h2>Liên kết mạng xã hội</h2>
+        <a href="https://www.facebook.com/iEVotingTeam" target="_blank">Facebook</a>
+      	<a href="https://x.com/iEVotingTeam" target="_blank">X</a>
+        <a href="https://www.tiktok.com/@vievotingteam" target="_blank">TikTok</a>
+        <a href="https://www.youtube.com/@v-ievotingteam" target="_blank">YouTube</a>
+    </section>
+    <footer>
+        <p>© 2025 V-iE VOTING TEAM. Designed by Admin chủ vựa.</p>
+    </footer>
+
+ <p style="height: 10px;">Cuộn xuống để thấy nút trở về đầu trang.</p>
+
+    <!-- Nút mũi tên lên đầu trang -->
+
+    
+<button id="scrollToTop" class="scroll-to-top">
+    <img src="storm-icon.svg" alt="Xoáy bão" class="storm-icon">
+</button>
+
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let scrollButton = document.getElementById("scrollToTop");
+
+            // Kiểm tra cuộn trang để hiển thị hoặc ẩn nút
+            window.onscroll = function () {
+                if (document.documentElement.scrollTop > 200) {
+                    scrollButton.style.display = "flex";
+                } else {
+                    scrollButton.style.display = "none";
+                }
+            };
+
+            // Khi bấm vào nút, cuộn lên đầu trang
+            scrollButton.addEventListener("click", function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
+        });
+    </script>
+<script>
+document.getElementById("scrollToTop").addEventListener("click", function() {
+    let icon = this.querySelector(".storm-icon"); 
+
+    if (icon.style.transform === "rotate(360deg)") {
+        icon.style.transform = "rotate(0deg)";
+    }
+
+    icon.style.transition = "transform 2s linear";
+    icon.style.transform = "rotate(360deg)";
+});
+</script>
+
+</body>
+
+
+</html>
