@@ -5,6 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>V-iE VOTING TEAM</title>
     <style>
+ /* CSS cho nút cuộn lên đầu trang - ĐẸP HƠN */
+
+ .scroll-to-top img {
+        width: 50px;
+        height: 50px;
+    }
+
+
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 55px;
+            height: 55px;
+          
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 26px;
+            cursor: pointer;
+            display: none; /* Ban đầu ẩn */
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Hiệu ứng hover */
+        .scroll-to-top:hover {
+
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Hiệu ứng khi bấm vào */
+        .scroll-to-top:active {
+            transform: scale(0.95);
+        }
+
+
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -38,10 +79,12 @@
 
         section#home {
             background-color: #e1f5fe;
+
         }
 
         section#announcements {
             background-color: #ffecb3;
+
         }
 
         section#socials a {
@@ -84,35 +127,6 @@
             <a href="#socials">Liên kết</a>
         </nav>
     </header>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Background Image</title>
-  <style>
-    body {
-      /* Đường dẫn đến hình ảnh */
-      background-image: url('It’s me, It’s V-iE Voting Team.png'); 
-      
-      /* Tùy chỉnh cách hiển thị hình ảnh */
-      background-size: 1000px 700px; /* Kích thước cụ thể */
-      background-repeat: no-repeat; /* Không lặp lại hình ảnh */
-      background-position: center; /* Căn giữa hình ảnh */
-    }
-  </style>
-</html>
-
-
-    <section id="home">
-	        <h2>Các bảng vote (Open)</h2>
-        <ul>
-            <li><strong>Concert:</strong> TEMPEST COMEBACK 6TH XX/YY/2025!</li>
-            <li><strong>Album:</strong> Phát hành ngày XX/YY/2025.</li>
-        </ul>
-
-    </section>
-    <section id="announcements">
 
 <ul>
 	<!DOCTYPE html>
@@ -198,6 +212,41 @@
 </head>
 <body>
 
+    <section id="home">
+	        <h2>CÁC BẢNG VOTE (Open)</h2>
+      
+<!-- Các section accordion với số thứ tự -->
+
+<button class="accordion" data-order="1">Show Champion</button>
+<div class="panel">
+
+ <style>
+    .justify-text {
+      text-align: justify;
+    }
+  </style>
+<p class="justify-text"><strong>1.1. Thời hạn sử dụng Chamsim</strong></p>
+<p class="justify-text">- Tim <i class="fas fa-heart" style="color: blue;"></i> sẽ reset trước 22H00<!-- Cờ Việt Nam --> <span class="flag-icon flag-icon-vn"></span> vào ngày cuối cùng của mỗi tháng.</p>
+<p class="justify-text">- Tim <i class="fas fa-heart" style="color: red;"></i> có thời hạn sử dụng VĨNH VIỄN.
+	</p>
+</div>
+<button class="accordion" data-order="2">Music Bank</button>
+
+<div class="panel">
+  <p>Tim <i class="fas fa-heart" style="color: red;"></i> có thời hạn sử dụng 90 ngày.</p>
+</div>
+
+<button class="accordion" data-order="3">The Show</button>
+<div class="panel">
+  <p>This is the content for section 3. You can add more information here as needed.</p>
+</div>
+QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+
+    </section>
+    <section id="announcements">
+
+
+
 <h2>CÁC APP VOTE</h2>
 
 <!-- Các section accordion với số thứ tự -->
@@ -260,5 +309,56 @@
     <footer>
         <p>© 2025 V-iE VOTING TEAM. Designed by Admin chủ vựa.</p>
     </footer>
+
+ <p style="height: 10px;">Cuộn xuống để thấy nút trở về đầu trang.</p>
+
+    <!-- Nút mũi tên lên đầu trang -->
+
+    
+<button id="scrollToTop" class="scroll-to-top">
+    <img src="storm-icon.svg" alt="Xoáy bão" class="storm-icon">
+</button>
+
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let scrollButton = document.getElementById("scrollToTop");
+
+            // Kiểm tra cuộn trang để hiển thị hoặc ẩn nút
+            window.onscroll = function () {
+                if (document.documentElement.scrollTop > 200) {
+                    scrollButton.style.display = "flex";
+                } else {
+                    scrollButton.style.display = "none";
+                }
+            };
+
+            // Khi bấm vào nút, cuộn lên đầu trang
+            scrollButton.addEventListener("click", function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
+        });
+    </script>
+<script>
+document.getElementById("scrollToTop").addEventListener("click", function() {
+    let icon = this.querySelector(".storm-icon"); 
+
+    if (icon.style.transform === "rotate(360deg)") {
+        icon.style.transform = "rotate(0deg)";
+    }
+
+    icon.style.transition = "transform 2s linear";
+    icon.style.transform = "rotate(360deg)";
+});
+</script>
+
 </body>
+
+
 </html>
